@@ -1,10 +1,11 @@
 package com.example.demo.service.interfaces;
 
 import com.example.demo.model.Citizen;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 
-public interface CitizenService {
+public interface CitizenService extends UserDetailsService{
 
     Citizen getCitizenById(Integer id);
 
