@@ -16,7 +16,7 @@ import java.util.List;
 @Component
 public class CitizenServiceImpl implements CitizenService {
 
-    CitizenRepository repository;
+    private final CitizenRepository repository;
 
     @Autowired
     public CitizenServiceImpl(CitizenRepository repository) {
@@ -35,7 +35,6 @@ public class CitizenServiceImpl implements CitizenService {
         return repository.findAll();
     }
 
-    @Override
     public void addCitizen(Citizen citizen) {
         citizen.setPassword(PasswordEncoderFactories.createDelegatingPasswordEncoder().encode(citizen.getPassword()));
         citizen.setRoles(Collections.singleton(new Role(2, "ROLE_USER")));

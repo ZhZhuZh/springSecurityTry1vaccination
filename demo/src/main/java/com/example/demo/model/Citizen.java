@@ -33,10 +33,10 @@ public class Citizen implements UserDetails {
         return roles;
     }
 
-    @Override
+    /*@Override
     public String getPassword() {
         return getPassword();
-    }
+    }*/
 
     @Override
     public String getUsername() {
@@ -63,11 +63,11 @@ public class Citizen implements UserDetails {
         return true;
     }
 
-    public void setPassword(String encode) {
+    /*public void setPassword(String password) {
         this.password = password;
     }
 
     public void setRoles(Set<Role> role_user) {
-        this.roles = roles;
-    }
+        this.roles = role_user;
+    }*/
 }
